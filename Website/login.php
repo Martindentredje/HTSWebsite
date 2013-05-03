@@ -4,13 +4,13 @@
 		session_start();
 $sql = "SELECT * FROM `user` WHERE `name`=\"$_POST[myUser]\" and `password`=\"$_POST[myPassword]\"";
 echo $sql;         
-         $result = mysql_query($query);
+         $result = mysql_query($sql);
 		 
 		 session_unset();
          
 		 if (mysql_numrows($result) == 1) {
-		      $_SESSION['session_user']=$_POST[myUser];
-			  //header('Location: index.html');
+		      $_SESSION['session_user']=$_POST['myUser'];
+			  header('Location: index.html');
 		 }
 		 else {
 			  //header('Location: login.html');
