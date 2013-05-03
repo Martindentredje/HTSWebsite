@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
 		"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="sv" lang="sv">    
     <head>
@@ -22,10 +22,10 @@
 				<a href="http://127.0.0.1/HTSWebsite/Website/Martin.php"> <img src="login.jpg" border=0></a>
 				<a href="http://127.0.0.1/HTSWebsite/Website/registrera.php"> <img src="register.jpg" border=0></a>
 				<h1 class="dokument-item-header"> Webbsidur</h1>
-				<form action="login.php" method="post">
+				<form action="register.php" method="post">
 Användarnamn: <input type="text" name="myUser"> <br />
-Lösenord: <input type="password" name="myPassword"> <br />
-<input type="submit" Value="Logga in">
+Lösenord: <input type="text" name="myPassword"> <br />
+<input type="submit" Value="Registrera">
 				<p class="info"></p>
 </div>
 </div>
