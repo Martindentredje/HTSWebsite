@@ -19,13 +19,10 @@
             </div>
             <div id="center">
                 <div id="info">
-				<a href="http://127.0.0.1/HTSWebsite/Website/index.html"> <img src="login.jpg" border=0></a>
+				<a href="http://127.0.0.1/HTSWebsite/Website/logout.php"> <img src="login.jpg" border=0></a>
 				<a href="http://127.0.0.1/HTSWebsite/Website/registrera.php"> <img src="register.jpg" border=0></a>
 				<h1 class="dokument-item-header"> Webbsidur</h1>
-				<form action="register.php" method="post">
-Användarnamn: <input type="text" name="myUser"> <br />
-Lösenord: <input type="password" name="myPassword"> <br />
-<input type="submit" Value="Registrera">
+				
 				<p class="info"></p>
 </div>
 </div>
