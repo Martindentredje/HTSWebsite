@@ -30,13 +30,20 @@ if(!isset($_SESSION['session_user'])){
 				<a href="http://127.0.0.1/HTSWebsite/Website/logoutreg.php"> <img src="register.jpg" border=0></a>
 				<a href="http://127.0.0.1/HTSWebsite/Website/laggtill.php"> <img src="add.jpg" border=0></a>
 				<a href="http://127.0.0.1/HTSWebsite/Website/sok.php"> <img src="search.jpg" border=0></a>
-				<h1 class="dokument-item-header"> Webbsidur</h1>
+				<h1 class="dokument-item-header"> Lägg till en person</h1>
 				
+												<form action="addperson.php" method="post">
+Namn: <input type="text" name="namn"> <br />
+Ålder: <input type="text" name="alder"> <br />
+Bostadsort: <input type="text" name="bostad"> <br />
+Intresse: <input type="text" name="intresse"> <br />
+<input type="submit" Value="Lägg till">
 				<p class="info"></p>
 </div>
 </div>
             <div id="right">
-					Höger kolumn!!!
+
+				<p class="info"></p>
             </div>
 
 			<div id="footer">
