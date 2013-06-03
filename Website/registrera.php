@@ -11,10 +11,11 @@
         <div id="content">
             <div id="top">
                <div id="banner" ></div>
+			   
             </div>
             <div id="left">
 					<div class="dokument-item">
-						Vänster kolumn!
+						<font color=#A1B2C3>.</font>
 					</div>
             </div>
             <div id="center">
@@ -30,7 +31,7 @@ Lösenord: <input type="password" name="myPassword"> <br />
 </div>
 </div>
             <div id="right">
-					Höger kolumn!!!
+					
             </div>
 
 			<div id="footer">

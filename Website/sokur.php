@@ -1,12 +1,20 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
-		"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-		
-		<?php
-session_start();
-if(!isset($_SESSION['session_user'])){
-	header('Location: login.php');
-}
+<?php
+$server="localhost";
+$user="root";
+$password="";
+$database="minwebsite";
+
+// Database Connection String
+$con = mysql_connect($server, $user, $password);
+if (!$con)
+  {
+  die('Could not connect: ' . mysql_error());
+  }
+
+mysql_select_db($database, $con);
 ?>
+
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="sv" lang="sv">    
     <head>
         <meta http-equiv="Content-Type" content="text/html charset=utf-8" />
@@ -21,7 +29,7 @@ if(!isset($_SESSION['session_user'])){
             </div>
             <div id="left">
 					<div class="dokument-item">
-						<font color=#A1B2C3>.</font>
+						Vänster kolumn!
 					</div>
             </div>
             <div id="center">
@@ -30,13 +38,34 @@ if(!isset($_SESSION['session_user'])){
 				<a href="http://127.0.0.1/HTSWebsite/Website/logoutreg.php"> <img src="register.jpg" border=0></a>
 				<a href="http://127.0.0.1/HTSWebsite/Website/laggtill.php"> <img src="add.jpg" border=0></a>
 				<a href="http://127.0.0.1/HTSWebsite/Website/sok.php"> <img src="search.jpg" border=0></a>
-				<h1 class="dokument-item-header"> Webbsidur</h1>
+				<h1 class="dokument-item-header"> Resultat</h1>
 				
+<?php
+
+if (!empty($_REQUEST['search'])) {
+	
+	$search = mysql_real_escape_string($_REQUEST['search']);     
+
+$sql = "SELECT * FROM persons WHERE namn LIKE '%".$search."%'"; 
+$r_query = mysql_query($sql); 
+
+while ($row = mysql_fetch_array($r_query)){  
+echo 'Name: ' .$row['namn'];
+echo '<br /> Ålder: ' .$row['alder'];
+echo '<br /> Bostadsort: '.$row['bostad'];
+echo '<br /> Intresse: '.$row['intresse'];
+
+}
+}
+?>
+
+
 				<p class="info"></p>
 </div>
 </div>
             <div id="right">
-					
+
+				<p class="info"></p>
             </div>
 
 			<div id="footer">
@@ -44,5 +73,9 @@ if(!isset($_SESSION['session_user'])){
 				</p>
 			</div>
         </div>
+    </body>
+</html>
+
+
     </body>
 </html>

@@ -21,7 +21,7 @@ if(!isset($_SESSION['session_user'])){
             </div>
             <div id="left">
 					<div class="dokument-item">
-						Vänster kolumn!
+					<font color=#A1B2C3>.</font>
 					</div>
             </div>
             <div id="center">
@@ -32,7 +32,7 @@ if(!isset($_SESSION['session_user'])){
 				<a href="http://127.0.0.1/HTSWebsite/Website/sok.php"> <img src="search.jpg" border=0></a>
 				<h1 class="dokument-item-header"> Sök efter en person</h1>
 				
-<form action="search.php" method="post">
+<form action="sokur.php" method="post">
 Namn: <input type="text" name="search"> <br />
 
 <input type="submit" Value="Sök">

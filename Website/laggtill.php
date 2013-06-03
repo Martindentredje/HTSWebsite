@@ -21,7 +21,7 @@ if(!isset($_SESSION['session_user'])){
             </div>
             <div id="left">
 					<div class="dokument-item">
-						Vänster kolumn!
+						<font color=#A1B2C3>.</font>
 					</div>
             </div>
             <div id="center">
